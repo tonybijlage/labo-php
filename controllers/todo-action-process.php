@@ -9,7 +9,7 @@ session_start();
 
 	function __autoload( $className )
 	{
-		include_once( 'classes/' . $className . '.php' );
+		include_once( '../classes/' . $className . '.php' );
 	}
 
 if (!isset($_SESSION['login']) || !isset($_SESSION['email']) )
@@ -23,7 +23,7 @@ else
 
 	if ($login === FALSE)
 	{
-		Helper::redirect( 'dashboard.php' );
+		Helper::redirect( '../dashboard.php' );
 	}
 }
 
@@ -40,7 +40,7 @@ if (isset($_POST['delete']))
 	$placeHolders = array(":id" => $id );
 
 	$dbf->performQuery($query, $placeHolders);
-	Helper::redirect( 'todo.php' );
+	Helper::redirect( '../todo.php' );
 
 }
 
@@ -72,7 +72,7 @@ if (isset($_POST['checked']))
 
 	$dbf->performQuery($query, $placeHolders);
 	
-		Helper::redirect( 'todo.php' );							
+		Helper::redirect( '../todo.php' );							
 }
 
 ?>

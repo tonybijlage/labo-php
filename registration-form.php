@@ -38,7 +38,7 @@
 		<?php endif ?>
 		<div class="body">
 		<h1>Registreren</h1>
-			<form action="registration-process.php" method="POST" accept-charset="UTF-8">
+			<form action="controllers/registration-process.php" method="POST" accept-charset="UTF-8">
 			    <p>
 		            <label for="email">e-mail</label>
 		            <br>

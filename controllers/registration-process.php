@@ -8,7 +8,7 @@
 
 	function __autoload( $className )
 	{
-		include_once( 'classes/' . $className . '.php' );
+		include_once( '../classes/' . $className . '.php' );
 	}
 
 	// Controle wanneer iemand op submit (=registreer) heeft gedrukt
@@ -37,7 +37,7 @@
 			if ( $userExists === TRUE )
 			{
 				Message::setMessage( "Deze gebruiker bestaat al, probeer een ander e-mailadres", "error" );
-				Helper::redirect( 'registration-form.php' );
+				Helper::redirect( '../registration-form.php' );
 			}
 			else // Bestaat de gebruiker nog niet, maak de gebruiker aan
 			{
@@ -53,7 +53,7 @@
 				
 				$_SESSION['email'] = $email;
 				$_SESSION['login'] = TRUE;
-				Helper::redirect( 'dashboard.php' );
+				Helper::redirect( '../dashboard.php' );
 			}
 		
 		} 

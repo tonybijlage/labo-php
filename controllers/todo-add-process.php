@@ -7,12 +7,12 @@ session_start();
 
 	function __autoload( $className )
 	{
-		include_once( 'classes/' . $className . '.php' );
+		include_once( '../classes/' . $className . '.php' );
 	}
 
 if (!isset($_SESSION['login']) || !isset($_SESSION['email']) )
 {
-	Helper::redirect( 'dashboard.php' );
+	Helper::redirect( '../dashboard.php' );
 }
 else
 {
@@ -21,7 +21,7 @@ else
 
 	if ($login === FALSE)
 	{
-		Helper::redirect( 'dashboard.php' );
+		Helper::redirect( '../dashboard.php' );
 	}
 }
 	
@@ -47,6 +47,6 @@ else
 		$dbf->performQuery($query, $placeHolders);
 		//var_dump($test);
 		//die();
-		Helper::redirect( 'todo.php' );
+		Helper::redirect( '../todo.php' );
 	}
 ?>

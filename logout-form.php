@@ -63,7 +63,7 @@ else
                 </nav>
             </header>
             <div>
-	            <form method="POST" action="logout-process.php" accept-charset="UTF-8">   
+	            <form method="POST" action="controllers/logout-process.php" accept-charset="UTF-8">   
 					    <p>
 					       Wenst u uit te loggen?
 					    </p>

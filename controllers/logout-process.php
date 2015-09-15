@@ -4,7 +4,7 @@ session_start();
 
 	function __autoload( $className )
 	{
-		include_once( 'classes/' . $className . '.php' );
+		include_once( '../classes/' . $className . '.php' );
 	}
 
 	if ( isset( $_POST[ 'submit' ] ) )
@@ -17,7 +17,7 @@ session_start();
 		//omleiden naar dashboard
 
 		Message::setMessage( 'U bent succesvol uitgelogd.' , 'success');
-		Helper::redirect( 'dashboard.php' );
+		Helper::redirect( '../dashboard.php' );
 
 	}
 

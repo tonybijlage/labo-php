@@ -70,7 +70,7 @@ else
                 
         		<h1>voeg een TODO toe</h1>
 
-				<form method="POST" action="todo-process.php" accept-charset="UTF-8">   
+				<form method="POST" action="controllers/todo-add-process.php" accept-charset="UTF-8">   
 				    <p>
 				        <label for="todo">TODO</label><br>
 				        <input name="todo" type="textarea">

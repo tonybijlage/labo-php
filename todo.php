@@ -39,18 +39,18 @@ else
 
  $dbf            	=   new PDOfunctions( 'localhost', 'labo', 'root', '' );
 
- $query 			= 'SELECT *
- 						FROM todo
- 						WHERE user = :email';
+ $query 			=	'SELECT *
+ 							FROM todo
+ 							WHERE user = :email';
 
- $placeHolders 		= array( ":email" => $email);
+ $placeHolders 		=	array( ":email" => $email);
 
-$todo 				= array();
+$todo 				=	array();
 $todoHeaders		=	array();
-$todo 				= $dbf->getDataFromTable($query, $placeHolders);
+$todo 				=	$dbf->getDataFromTable($query, $placeHolders);
 
-$todoHeaders	 = $dbf->getColumnNames($todo, true);
-$todoHeaders[] = 'delete';
+$todoHeaders	 	= 	$dbf->getColumnNames($todo, true);
+$todoHeaders[] 		= 	'delete';
 //var_dump($todo);
 ?>
 
@@ -92,7 +92,7 @@ $todoHeaders[] = 'delete';
         		<a href="todo-add.php">voeg een TODO toe</a>
         		<p></p>
 				<div>
-					<form method="POST" action="todo-action.php" accept-charset="UTF-8">   
+					<form method="POST" action="controllers/todo-action-process.php" accept-charset="UTF-8">   
 					<table>
 						<?php if($todo): ?>
 						<thead>
@@ -105,10 +105,12 @@ $todoHeaders[] = 'delete';
 						<?php foreach ($todo as $key => $td): ?>
 							<tr class="<?= ( ( $key + 1) %2 == 0 ) ? 'even' : '' ?>">
 								<td><?= ($key + 1) ?></td>
-								<?php foreach ($td as $value): ?>
-								<?php if ($value !== $td['checked']): ?>
+								<?php foreach ($td as $teller => $value): ?>
+
+									<?php if($teller !== 'checked'): ?>
+									
 									<td><?= $value ?></td>
-								<?php endif ?>
+									<?php endif ?>
 								<?php endforeach ?>
 								
 								<td>

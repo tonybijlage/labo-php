@@ -203,11 +203,15 @@ img{
 
 td{
 	min-width: 45px;
+	//margin-right: 25px;
+	//margin-left: 25px;
 }
 td:nth-child(6), :nth-child(5){
 
 	text-align: center;
 }
-
+thead td{
+	text-align: center;
+}
 
 

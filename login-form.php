@@ -46,7 +46,7 @@
                 
         		<h1>Meld je aan.</h1>
 
-				<form method="POST" action="login-process.php" accept-charset="UTF-8">   
+				<form method="POST" action="controllers/login-process.php" accept-charset="UTF-8">   
 				    <p>
 				        <label for="email">Email</label><br>
 				        <input name="email" type="text" id="email">
