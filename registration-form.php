@@ -42,12 +42,12 @@
 			    <p>
 		            <label for="email">e-mail</label>
 		            <br>
-		            <input type="text" id="email" name="email">
+		            <input type="text" id="email" name="email" required>
 		        </p>
 		        <p>
 		            <label for="password">paswoord</label>
 		            <br>
-		            <input type="password" id="password" name="password">
+		            <input type="password" id="password" name="password" required>
 		            <!--input type="submit" name="generatePassword" value="Genereer een paswoord"-->
 		        </p>
 			    

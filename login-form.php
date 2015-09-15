@@ -49,12 +49,12 @@
 				<form method="POST" action="controllers/login-process.php" accept-charset="UTF-8">   
 				    <p>
 				        <label for="email">Email</label><br>
-				        <input name="email" type="text" id="email">
+				        <input name="email" type="text" id="email" required>
 				    </p>
 				    <!-- password field -->
 				    <p>
 				        <label for="password">Password</label><br>
-				        <input name="password" type="password" value="" id="password">
+				        <input name="password" type="password" value="" id="password" required>
 				    </p>
 
 				    <!-- submit button -->
